@@ -76,7 +76,7 @@ def recommendation(data, player):
 
     top_5 = recommendation.iloc[0:5].reset_index (drop=True)
     for i in range (len (top_5)):
-        col1, col2, col3 = st.columns([3, 1, 4])
+        col1, col2, col3 = st.columns([3, 2, 4])
         with col1:
             rec_face_url = data.loc[data["short_name"] == top_5["short_name"].values[i], "player_face_url"].values[0]
             st.image (rec_face_url)
